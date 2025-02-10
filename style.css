@@ -177,10 +177,15 @@ button {
 
 body.adblock-active {
     overflow: hidden; /* Mencegah scrolling */
-    pointer-events: none; /* Mencegah klik di seluruh halaman */
+    pointer-events: none; /* Mencegah interaksi di seluruh halaman */
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
-body.adblock-active #adblock-popup {
+body.adblock-active #adblock-popup, 
+body.adblock-active #adblock-popup * {
     pointer-events: auto; /* Tapi tetap bisa klik di pop-up */
 }
+
 
