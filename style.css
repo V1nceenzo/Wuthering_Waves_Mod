@@ -175,17 +175,23 @@ button {
     color: white;
 }
 
-body.adblock-active {
-    overflow: hidden; /* Mencegah scrolling */
-    pointer-events: none; /* Mencegah interaksi di seluruh halaman */
+#overlay {
+    display: none;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparan gelap */
+    z-index: 9999;
 }
 
-body.adblock-active #adblock-popup, 
-body.adblock-active #adblock-popup * {
-    pointer-events: auto; /* Tapi tetap bisa klik di pop-up */
+body.adblock-active {
+    overflow: hidden; /* Hentikan scrolling */
+}
+
+body.adblock-active #overlay {
+    display: block; /* Aktifkan overlay */
 }
 
 
