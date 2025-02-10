@@ -129,7 +129,7 @@
         </p>
     </div>
 
-
+    <div id="overlay"></div>
     
     <script>
         function checkAdBlock() {
@@ -141,7 +141,8 @@
                 // AdBlock aktif, tampilkan pop-up
                 document.getElementById('adblock-popup').style.display = 'block';
                 document.getElementById('overlay').style.display = 'block';
-                document.body.classList.add('adblock-active'); // Tambahin kelas ke body
+                document.body.classList.add('adblock-active'); 
+                document.getElementById('overlay').style.display = 'block'; // Munculin overlay
             }
         }
       
