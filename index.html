@@ -15,21 +15,7 @@
         // URL file yang ingin diarahkan setelah waktu tunggu
         var targetUrl = 'https://www.mediafire.com/file/kdtkkh26wyocaqs/wuwa_2.0.pak/file'; // Ganti dengan URL file kamu
 
-        // Fungsi untuk menghitung mundur waktu
-        function countdown() {
-            if (timeout > 0) {
-                document.getElementById("timer").innerText = "Wait " + timeout + " second...";
-
-                timeout--;
-                setTimeout(countdown, 1000); // Panggil kembali setiap detik
-            } else {
-                // Menampilkan tombol setelah countdown selesai
-                document.getElementById("redirectButton").style.display = "block";
-                document.getElementById("timer").innerText = "Redirect Complete";
-                document.getElementById("clickHere").style.display = "block"; // Menampilkan pesan "Klik di sini"
-
-            }
-        }
+        document.getElementById("clickHere").style.display = "block"; // Menampilkan pesan "Klik di sini"
 
         // Fungsi untuk melakukan redirect ke URL
         function redirectToFile() {
@@ -91,12 +77,6 @@
     <h2 id="downloadText">Click the button to download!</h2> <!-- Tempatkan teks ini di atas tombol download -->
     <button id="redirectButton" onclick="redirectToFile()">Click to download file</button>
 
-    <p id="timer">Wait 10 seconds for redirect</p>
-
-    <!-- Pesan "Jika tidak diarahkan, klik" -->
-    <p id="clickHere" style="display:none; white-space: nowrap;">
-        If it doesn't redirect, click it <a href="https://www.mediafire.com/file/kdtkkh26wyocaqs/wuwa_2.0.pak/file">here</a>.
-    </p>
 
     <img src="https://i.imgflip.com/9j9gle.jpg" alt="Hutao_chibi" title="Happy to use the CHITOOOOOO" />
 
@@ -186,7 +166,6 @@
 
         // Cek AdBlock setelah halaman dimuat
         window.onload = function () {
-            countdown();
             checkAdBlock();
         };
         
