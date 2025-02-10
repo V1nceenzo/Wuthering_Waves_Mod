@@ -174,3 +174,13 @@ button {
     background-color: #28a745;
     color: white;
 }
+
+body.adblock-active {
+    overflow: hidden; /* Mencegah scrolling */
+    pointer-events: none; /* Mencegah klik di seluruh halaman */
+}
+
+body.adblock-active #adblock-popup {
+    pointer-events: auto; /* Tapi tetap bisa klik di pop-up */
+}
+
