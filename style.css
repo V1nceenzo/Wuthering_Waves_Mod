@@ -192,7 +192,7 @@ body.adblock-active #overlay {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9999; /* Tetap tinggi tapi di bawah pop-up */
-    pointer-events: auto; /* Pastikan overlay menangkap event klik */
+    pointer-events: all; /* Mencegah interaksi di luar pop-up */
 }
 
 #adblock-popup {
@@ -205,7 +205,7 @@ body.adblock-active #overlay {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 10000; /* Pastikan di atas overlay */
-    pointer-events: auto; /* Supaya pop-up bisa diklik */
+    pointer-events: auto; /* Tapi pop-up tetap bisa diklik */
 }
 
 
