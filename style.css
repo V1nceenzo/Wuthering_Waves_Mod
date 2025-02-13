@@ -7,9 +7,9 @@
 
 /* Background halaman */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9; /* Warna latar belakang cerah */
-    color: #333; /* Teks berwarna abu-abu gelap */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     padding: 20px;
     text-align: center;
 }
@@ -64,29 +64,46 @@ a:hover {
 /* Teks Subscribe */
 #subscribeText {
     font-size: 24px;
-    color: #333;
-    text-align: center; /* Memastikan teks berada di tengah */
+    color: #333; /* Warna default */
+    text-align: center;
     margin-top: 40px;
 }
 
+/* Saat dark mode aktif, ubah warna teks */
+body.dark-mode #subscribeText {
+    color: white;
+}
+
+
 /* Tombol Subscribe */
 #subscribeButton {
-    background-color: #ff5733; /* Warna tombol subscribe (oranye) */
+    background-color: #ff5733; /* Warna oranye */
     color: white;
     padding: 12px 24px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     display: block;
-    margin: 20px auto; /* Memusatkan tombol */
+    margin: 20px auto;
 }
 
-/* Tombol Subscribe: Hover effect */
+/* Hover effect */
 #subscribeButton:hover {
-    background-color: #ff4527; /* Warna saat hover */
+    background-color: #ff4527;
 }
+
+/* Dark mode: Tombol subscribe tetap terlihat */
+body.dark-mode #subscribeButton {
+    background-color: #ff5733;
+    color: white;
+}
+
+body.dark-mode #subscribeButton:hover {
+    background-color: #ff4527;
+}
+
 
 /* Gambar meme yang ditambahkan */
 img {
@@ -150,6 +167,18 @@ div a:hover {
     z-index: 1000;
     text-align: center;
 }
+
+
+#adblock-warning {
+    color: black; /* Warna teks saat light mode */
+}
+
+
+
+
+
+
+
 #overlay {
     display: none;
     position: fixed;
@@ -206,6 +235,155 @@ body.adblock-active #overlay {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 10000; /* Pastikan di atas overlay */
     pointer-events: auto; /* Tapi pop-up tetap bisa diklik */
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between; /* Menu di kiri, toggle di kanan */
+    align-items: center;
+    background: #4CAF50; /* Tetap hijau */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.toggle-container {
+    margin-left: auto; /* Biar tombol di pojok kanan */
+}
+
+
+.download-btn {
+    background-color: #ff4500;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.download-btn:hover {
+    background-color: #d73c00;
+}
+
+
+
+
+body.dark-mode {
+    background-color: #222; /* Warna gelap */
+    color: white;
+}
+
+body.dark-mode nav {
+    background-color: #4CAF50; /* Tetap hijau */
+}
+
+
+#darkModeToggle {
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 14px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Saat hover */
+#darkModeToggle:hover {
+    background-color: #ddd;
+}
+
+/* Saat dark mode aktif */
+body.dark-mode #darkModeToggle {
+    background-color: black;
+    color: white;
+}
+
+/* Saat hover di dark mode */
+body.dark-mode #darkModeToggle:hover {
+    background-color: #555;
+}
+
+
+
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+/* INI BUAT TAB MODS */
+
+
+
+/* Container Tabel */
+/* Style untuk table container */
+.table-container {
+    width: 80%; /* Lebar tabel */
+    margin: 20px auto; /* Tengahin */
+    overflow-x: auto; /* Scroll kalau terlalu lebar */
+}
+
+/* Style tabel */
+table {
+    width: 100%; /* Biar tabel penuh di dalam container */
+    border-collapse: collapse;
+    background-color: #222;
+}
+
+/* Style Header */
+th {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Style isi tabel */
+td {
+    text-align: center;
+    padding: 12px;
+    color: white;
+}
+
+/* Style untuk garis antar baris */
+tr {
+    border-bottom: 1px solid #555;
+}
+
+/* Style untuk link */
+td a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Biar teks tetap sejajar */
+th, td {
+    width: 33.33%; /* Bagi rata semua kolom */
+    text-align: center; /* Tengahin teks */
+    vertical-align: middle;
 }
 
 
